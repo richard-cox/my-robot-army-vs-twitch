@@ -1,0 +1,28 @@
+{
+  "name": "myrobotarmy",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "lint": "gulp lint"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "gulp": "^3.9.0",
+    "johnny-five": "0.10.6",
+    "lodash": "^4.13.1",
+    "q": "^1.4.1",
+    "winston": "^2.3.1",
+    "tmi.js": "git@github.com:richard-cox/tmi.js.git#master"
+  },
+  "devDependencies": {
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^1.2.2"
+  }
+}

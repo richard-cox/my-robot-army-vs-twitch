@@ -1,0 +1,24 @@
+<div class="tool panel panel-default">
+  <div class="panel-heading"><h4>Send Army a Command</h4></div>
+  <div class="panel-body">
+    <form class="form-horizontal" name="armCommandCtrl.commandForm" role="form" ng-submit="armCommandCtrl.submit()">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="command">Command</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" id="command" name="command" ng-model="armCommandCtrl.form.command"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+        <button class="btn btn-primary" type="submit" ng-disabled="!armCommandCtrl.form.command">Submit</button>
+        </div>
+      </div>
+    </form>
+    <div class="arm-status" ng-if="armCommandCtrl.status">
+      <div class="alert" ng-class="[{'alert-danger': armCommandCtrl.error}, {'alert-success': !armCommandCtrl.error}]">
+        Command Result: {{armCommandCtrl.status}}
+        <p ng-if="armCommandCtrl.error" ng-bind-html="armCommandCtrl.error"></p>
+      </div>
+    </div>
+  </div>
+</div>

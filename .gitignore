@@ -1,0 +1,6 @@
+backend/dev-config.json
+frontend/lib
+frontend/index.html
+node_modules
+mearm-web-interface/node_modules
+*.iml

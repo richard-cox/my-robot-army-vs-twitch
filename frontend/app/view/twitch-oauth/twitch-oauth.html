@@ -1,0 +1,47 @@
+<div class="tool panel panel-default">
+  <!--<span class="glyphicon glyphicon-name"></span>-->
+  <div class="panel-heading"><h4>Fetch Twitch OAuth Token</h4></div>
+  <div class="panel-body">
+    <p>Create an OAuth token that can be used by the app to interact with Twitch chat. Originally had planned to do more
+      with this token and that needed additional scope items, however atm only 'chat_login' is needed. There is a site
+      that creates a token with only this scope item that can be used instead
+      <a href="http://twitchapps.com/tmi/" rel="noopener noreferrer" target="_blank" translate>http://twitchapps.com/tmi/</a>
+    </p>
+    <p>Once created you will need to copy</p>
+    <pre>my-robot-army-vs-twitch/backend/dev-config.json.example</pre>
+    <p>to</p>
+    <pre>my-robot-army-vs-twitch/backend/dev-config.json</pre>
+    <p>and set the value of twitch:identity:password in the format of</p>
+    <pre>oauth:&lt;token goes here&gt;</pre>
+    </p>
+    <form class="form-horizontal" name="twitchOauthCtrl.authForm" role="form" ng-submit="twitchOauthCtrl.fetch()">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="clientId">Twitch OAuth app client id</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" id="clientId" name="clientId" ng-model="twitchOauthCtrl.clientId"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="scope">Scope (space separated)</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" id="scope" name="scope" ng-model="twitchOauthCtrl.scope"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <button class="btn btn-primary" type="submit">Create Token</button>
+        </div>
+      </div>
+    </form>
+    <div class="arm-status" ng-if="twitchOauthCtrl.tokenResult">
+      <div class="alert"
+           ng-class="[{'alert-danger': twitchOauthCtrl.tokenResult.error}, {'alert-success': !twitchOauthCtrl.tokenResult.error}]">
+        <p ng-if="twitchOauthCtrl.tokenResult.error"
+           ng-bind-html="twitchOauthCtrl.tokenResult.error_description || twitchOauthCtrl.tokenResult.error"></p>
+        <div ng-if="twitchOauthCtrl.tokenResult.access_token">Plonk this into your dev config
+          <pre>oauth:{{twitchOauthCtrl.tokenResult.access_token}}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

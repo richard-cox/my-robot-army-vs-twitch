@@ -1,0 +1,22 @@
+{
+  "port": 4100,
+  "tmiClient": {
+    "options": {
+      "debug": false
+    },
+    "connection": {
+      "reconnect": true,
+      "secure": true
+    }
+  },
+  "twitch": {
+    "identity": {
+      "username": "<username in lower case, for example 'williambabbington'>",
+      "password": "<oauth token with chat_login in scope, for example 'oauth:<token>'"
+    },
+    "channel": "<channel name in lower case, for example '#williambabbington'",
+    "chatPrefix": "Army: "
+  },
+  "disableTwitch": false,
+  "disableArduino": false
+}

@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+}
+
+.application {
+  padding-left: 10px
+}
+
+.tools {
+  padding: 20px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tool {
+  padding: 20px;
+}
+
+form {
+  padding-top: 20px;
+}
+

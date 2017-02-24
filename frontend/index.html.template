@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="my-robot-arm" ng-strict-di>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <base href="/">
+
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- inject:css -->
+  <!-- endinject -->
+
+
+  <title>My Robot Army - Configuration and Tools</title>
+  <!-- bower:js -->
+  <!-- endbower -->
+
+  <!-- inject:js -->
+  <!-- endinject -->
+</head>
+<body application></body>
+</html>
