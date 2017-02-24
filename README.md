@@ -108,9 +108,25 @@ Check out the log, ensure everything is fine.
 2017-02-24T14:07:12.085Z - info: Twitch: Connected. State:  OPEN
 2017-02-24T14:07:12.106Z - info: Serving api + frontend (my-robot-army-vs-twitch/frontend) on 4100
 ```
-Notice that the app will send a message to chat to say it's up and running. 
+Notice that the app will send a message to chat to say it's up and running. It will also send a message when it's closing down.
 
-There's a small dev console site (http://localhost:4100, or if running with gulp and to use browser sync http://localhost:4101). 
+In your twitch channel type
+
+```
+army help
+```
+
+to get started.
+
+Other useful commands
+
+```
+army help positions
+army help commands
+army command <left|right|forward|backward|up|down> <degree step>
+```
+
+There's also a small dev console site (http://localhost:4100, or if running with gulp and to use browser sync http://localhost:4101). 
 There you can request an oauth token with additional scope properties. You can also send commands to the arm, bypassing twitch
 but still going through the same message parsing process. 
  
