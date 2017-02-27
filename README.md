@@ -11,6 +11,8 @@ This Node.js application is the link between Twitch and the MeArm. Chat comments
 and commands are pushed to the arm via [Johhny-Five](http://johnny-five.io/).
  
 *Pssst - Check out Mime's latest kickstarter project - [MeArm Pi](https://www.kickstarter.com/projects/mime/mearm-pi-build-your-own-raspberry-pi-powered-robot).*
+
+For a rather uninspiring video see https://www.youtube.com/watch?v=C7KvmduQW90
  
 ## Disclaimers
 Some of the code has been rushed, please don't think this is product quality! Also some is a bit overkill, 
